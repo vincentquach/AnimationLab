@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Acme');
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  position: relative;
+  background-image: url("../images/desert.png");
+  height: 80vh;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.tank {
+  position: absolute;
+  bottom: -90px;
+  left: 30px;
+}
+
 .nav ul li{
   display: inline-block;
 }
