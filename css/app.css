@@ -1,14 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 body {
   margin: 0;
   padding: 0;
 }
 
+h1 {
+  font-family: 'Press Start 2P';
+  margin-top: 50px;
+}
+
+.nav a li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 10px;
+  font-family: Acme;
+  color: white;
+}
+
+.nav ul {
+  background-color: #333;
+  margin-bottom: 0px;
+}
+
 .bg {
   position: relative;
   background-image: url("../images/desert.png");
-  height: 80vh;
+  height: 70vh;
   background-size: cover;
   background-position: 0 0;
   background-repeat: repeat-x;
@@ -28,10 +47,6 @@ body {
   position: absolute;
   bottom: -90px;
   left: 30px;
-}
-
-.nav ul li{
-  display: inline-block;
 }
 
 .main {
@@ -86,4 +101,23 @@ ul {
 .characterMenu li:hover img {
   left: 300px;
   opacity: 1;
+}
+
+.jack {
+  height: 130px;
+  width: 80px;
+  background: url("../images/Jack.png");
+  animation: play 0.8s steps(8) infinite;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -710px;
+  }
 }
