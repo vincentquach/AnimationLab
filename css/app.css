@@ -103,21 +103,28 @@ ul {
   opacity: 1;
 }
 
+.road {
+  border-bottom: 7px dashed black;
+}
+
 .jack {
   height: 130px;
-  width: 80px;
+  width: 125px;
   background: url("../images/Jack.png");
-  animation: play 0.8s steps(8) infinite;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  animation: play 1s steps(8) infinite, forward 8s linear infinite;
 }
 
 @keyframes play {
-  from {
-    background-position: 0px;
+  100% {
+    background-position: -1000px;
   }
-  to {
-    background-position: -710px;
+}
+
+@keyframes forward {
+  0% {
+    transform:translateX(-100px);
+  }
+  100% {
+    transform: translateX(1900px);
   }
 }
