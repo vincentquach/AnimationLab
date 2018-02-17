@@ -128,3 +128,71 @@ ul {
     transform: translateX(1900px);
   }
 }
+
+.contactBody {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+  font-family: Acme;
+}
+
+.cardBox {
+  perspective: 500px;
+  margin: 15px;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: .5s ease;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.phone {
+  background: red;
+}
+
+.email {
+  background: green;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  backface-visibility: hidden;
+
+}
+
+.card-front {
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.card-back {
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
